@@ -1,0 +1,55 @@
+﻿@model List<SubCategory>
+@{
+	Layout = "_SubCategoryLayout";
+
+	ViewData["Title"] = "Index";
+}
+
+@section SubCategorySection{
+	<section class="ftco-section ftco-category ftco-no-pt mt-5">
+	<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<div class="row">
+						<div class="col-md-6 order-md-last align-items-stretch d-flex">
+							<div class="category-wrap-2 ftco-animate img align-self-stretch d-flex">
+								<div class="text text-center">
+									<h2 class="text-info">TrendzHub</h2>
+									<p>Protect the health of every home</p>
+									<p><a href="#" class="btn btn-info">Shop now</a></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(/images/@Model[0].Image)">
+								<div class="text px-3 py-1 bg-info">
+									<h2 class="mb-0"><a asp-action="ShowProductBySubCategory" asp-controller="ProductSupplier" asp-route-id="@Model[0].Id">@Model[0].Name</a></h2>
+								</div>
+							</div>
+							<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(/images/@Model[1].Image);">
+								<div class="text px-3 py-1 bg-info">
+									<h2 class="mb-0"><a asp-action ="ShowProductBySubCategory" asp-controller="ProductSupplier" asp-route-id="@Model[1].Id">@Model[1].Name</a></h2>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(/images/@Model[2].Image);">
+						<div class="text px-3 py-1 bg-info">
+							<h2 class="mb-0"><a asp-action="ShowProductBySubCategory" asp-controller="ProductSupplier" asp-route-id="@Model[2].Id">@Model[2].Name</a></h2>
+						</div>
+					</div>
+					<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(/images/@Model[3].Image);">
+						<div class="text px-3 py-1 bg-info">
+							<h2 class="mb-0"><a asp-action="ShowProductBySubCategory" asp-controller="ProductSupplier" asp-route-id="@Model[3].Id">@Model[3].Name</a></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> 
+		
+	</section>
+}
+

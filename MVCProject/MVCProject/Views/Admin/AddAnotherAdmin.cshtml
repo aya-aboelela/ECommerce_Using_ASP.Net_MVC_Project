@@ -1,0 +1,112 @@
+﻿@model MVCProject.ViewModel.RegistrationViewModel
+
+@{
+    Layout = "_AddAnotherAdmin";
+    ViewData["Title"] = "Add Another Admin";
+}
+<hr />
+<div class="py-1 bg-info text-white">
+    <div class="container">
+        <div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
+            <div class="col-lg-12 d-block">
+                <div class="row d-flex">
+                    <div class="col-md pr-4 d-flex topper align-items-center">
+                        <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+                        <span class="text">+ 1235 2355 98</span>
+                    </div>
+                    <div class="col-md pr-4 d-flex topper align-items-center">
+                        <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+                        <span class="text">youremail@email.com</span>
+                    </div>
+                    <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
+                        <span class="text">3-5 Business days delivery &amp; Free Returns</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Registration">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+
+                <label asp-for="FirstName" class="control-label"></label>
+                <br />
+                <br />
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                <label asp-for="LastName" class="control-label"></label>
+                <br />
+                <br />
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserName" class="control-label"></label>
+                <br />
+                <br />
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                <label asp-for="Password" class="control-label"></label>
+                <br />
+                <br />
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                <label asp-for="ConfirmPassword" class="control-label"></label>
+                <br />
+                <br />
+                <input asp-for="ConfirmPassword" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                <label asp-for="Address" class="control-label"></label>
+                <br />
+                <br />
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+
+            <div class="form-group last mb-8 form-check">
+
+       
+                <label asp-for="Gender" class="control-label"></label>
+                <span asp-validation-for="Gender" class="text-danger"></span>
+          
+                <br />
+                <br />
+
+                @Html.RadioButtonFor(m => m.Gender,"Male")Male
+
+                <br />
+                @Html.RadioButtonFor(m => m.Gender,"Female")Female
+                <br />
+
+            </div>
+
+            <div class="form-group form-button">
+                <input type="submit" value="Add Another Admin" asp-action="AddAnotherAdmin" asp-controller="Admin" class="form-submit btn-primary " />
+            </div>
+        </form>
+    </div>
+</div>  
+<div>
+    
+    <p><a class="btn btn-primary" asp-action="Dashboard" asp-controller="Admin" style="color:#17a2b8;">BACK TO DASHBOARD</a></p> <!--هنحط هنا الصفحه بتاعه الادمن --> >
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,63 @@
+﻿@model MVCProject.ViewModel.RoleViewModel
+@{
+    Layout = "_NewRole";
+    ViewData["Title"] = "New";
+}
+
+
+<h1 class="ml-5">New Role</h1>
+<hr />
+<div class="newform">
+    <div class="col-md-4">
+        <form asp-action="New" class="bg-info">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="RoleName" class="control-label text-white"></label>
+                <input asp-for="RoleName" class="form-control" />
+                <span asp-validation-for="RoleName" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-secondary"/>
+            </div>
+        </form>
+        <div>
+            <p><a asp-action="Dashboard" asp-controller="Admin" class="btn btn-info py-3 px-5 mt-3">Back to Dashboard</a></p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .savebtn {
+        width: 120px;
+    }
+
+    .newform {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    label {
+        color: rgb(212, 208, 208);
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+        /*        display: grid;
+                    */
+    }
+
+
+        .form-group input {
+            /*  background-color: #17a2b8;*/
+            border: 1px solid #17a2b8;
+            border-radius: 12px;
+        }
+
+    form {
+        border: 1px solid#17a2b8;
+        border-radius: 5px;
+        padding: 20px;
+        width: 400px;
+    }
+</style>

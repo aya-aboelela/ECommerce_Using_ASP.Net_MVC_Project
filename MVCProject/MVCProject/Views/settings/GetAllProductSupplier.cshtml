@@ -1,0 +1,42 @@
+﻿@model List<Produc_Supplier>
+@{
+    ViewData["Title"] = "GetAllProductSupplier";
+}
+@* <partial name="_Navbar"/>
+*@
+<div class="mb-5">
+    <p><a asp-action="Dashboard" asp-controller="Admin" class="btn btn-info py-3 px-5 mt-3">Back to Dashboard</a></p>
+</div>
+
+
+<h2 class="text-center mt-5 mb-3 text-info">All Product-Supplier</h2>
+<a class="btn btn-info mb-4" asp-action="New" asp-controller="ProductSupplier">Add New</a>
+<table class="table table-bordered table-hover">
+    <tr class="bg-info text-white">
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Category Name</th>
+        <th>SubCategory Name</th>
+        <th>Supplier Name</th>
+        <th>Setting</th>
+    </tr>
+    @foreach (Produc_Supplier item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Product.Name</td>
+            <td>@item.Price</td>
+            <td>@item.Description</td>
+            <td>@item.Category.Name</td>
+            <td>@item.SubCategory.Name</td>
+            <td>@item.Supplier.Name</td>
+
+            <td>
+                <a asp-action="Edit" style="color:#17a2b8;"  asp-controller="ProductSupplier" asp-route-id="@item.Id">Edit</a>
+            </td>
+        </tr>
+    }
+</table>
+

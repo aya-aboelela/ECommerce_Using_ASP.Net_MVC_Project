@@ -1,0 +1,31 @@
+﻿@model List<SubCategory>
+@{
+    ViewData["Title"] = "GetAllSubCategory";
+}
+@*<partial name="_Navbar" />
+*@
+<div class="mb-5">
+    <p><a asp-action="Dashboard" asp-controller="Admin" class="btn btn-info py-3 px-5 mt-3">Back to Dashboard</a></p>
+</div>
+
+<h2 class="text-center mt-5 mb-3 text-info">All SubCategories</h2>
+
+<table class="table table-bordered table-hover">
+    <tr class ="bg-info text-white">
+        <th>Id</th>
+        <th>Name</th>
+        <th>Setting</th>
+    </tr>
+    @foreach (SubCategory item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+
+            <td>
+                <a asp-action="Edit" asp-controller="SubCategory" style="color:#17a2b8;" asp-route-id="@item.Id">Edit</a>
+            </td>
+        </tr>
+    }
+</table>
+

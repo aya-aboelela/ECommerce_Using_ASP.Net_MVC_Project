@@ -1,0 +1,118 @@
+﻿
+@{
+	Layout = "_Settings";
+	ViewData["Title"] = "Dashboard";
+}
+
+@section Dashboard{
+	<div class="py-1 bg-info text-white">
+		<div class="container">
+			<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
+				<div class="col-lg-12 d-block">
+					<div class="row d-flex">
+						<div class="col-md pr-4 d-flex topper align-items-center">
+							<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+							<span class="text">+ 1235 2355 98</span>
+						</div>
+						<div class="col-md pr-4 d-flex topper align-items-center">
+							<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+							<span class="text">youremail@email.com</span>
+						</div>
+						<div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
+							<span class="text">3-5 Business days delivery &amp; Free Returns</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand text-info" href="index.html">E-Shop</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav ml-auto">
+				  <li class="nav-item"><a asp-action="signOut" asp-controller="Account" class="nav-link">Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section class="ftco-section ftco-category ftco-no-pt mt-4">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<div class="row">
+
+						<div class="col-md-6">
+							<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(/images/womensfashion.jpg)">
+								<div class="text px-3 py-1 bg-info text-white">
+									<h2 class="mb-0"><a asp-action="GetAllCategory" asp-controller="settings">Categories</a></h2>
+								</div>
+							</div>
+							<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(/images/products.png);">
+								<div class="text px-3 py-1 bg-info text-white">
+									<h2 class="mb-0"><a asp-action="GetAllProduct" asp-controller="settings">Products</a></h2>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(/images/subcategory.webp);">
+						<div class="text px-3 py-1 bg-info text-white">
+							<h2 class="mb-0"><a asp-action="GetAllSubCategory" asp-controller="settings">SubCategories</a></h2>
+						</div>
+					</div>
+
+					<div class="category-wrap ftco-animate img d-flex align-items-end mt-4" style="background-image: url(/images/product-suppliers.png);">
+						<div class="text px-3 py-1 bg-info text-white">
+							<h2 class="mb-0"><a asp-action="GetAllProductSupplier" asp-controller="settings">Products-Suppliers</a></h2>
+						</div>
+					</div>
+				</div>
+
+				
+
+			</div>
+			<div class="row mt-4">
+				<div class="col-md-8">
+					<div class="row">
+
+						<div class="col-md-6">
+							<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(/images/supplier.png)">
+								<div class="text px-3 py-1 bg-info text-white">
+									<h2 class="mb-0"><a asp-action="GetAllSuppliers" asp-controller="settings">Suppliers</a></h2>
+								</div>
+							</div>
+							<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(/images/role.png);">
+								<div class="text px-3 py-1 bg-info text-white">
+									<h2 class="mb-0"><a asp-action="New" asp-controller="settings">Role</a></h2>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(/images/addadmin.webp);">
+						<div class="text px-3 py-1 bg-info text-white">
+							<h2 class="mb-0"><a asp-action="AddAnotherAdmin" asp-controller="settings">Add Another Admin</a></h2>
+						</div>
+					</div>
+					
+				</div>
+
+
+
+			</div>
+		</div>
+
+
+	</section>
+}

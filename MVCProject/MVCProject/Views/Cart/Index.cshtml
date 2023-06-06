@@ -1,0 +1,76 @@
+﻿@model List<Cart>
+@{
+	Layout = "_CartLayout";
+	ViewData["Title"] = "Index";
+}
+
+
+<section class="ftco-section ftco-cart">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 ftco-animate">
+				<div class="cart-list">
+					<table class="table">
+						<thead class="thead-primary bg-info">
+							<tr class="text-center thead-primary bg-info text-white">
+								<th>&nbsp;</th>
+								<th>&nbsp;</th>
+								<th>Product name</th>
+								<th>Price</th>
+								<th>Quantity</th>
+								<th>Total</th>
+							</tr>
+						</thead>
+						<tbody>
+							@foreach (var item in Model)
+							{
+								<tr class="text-center">
+									<td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
+
+									<td class="image-prod"><div class="img" style="background-image:url(/images/@item.Produc_Supplier.Image);"></div></td>
+
+									<td class="product-name">
+										<h3>@item.Produc_Supplier.Product.Name</h3>
+										<p>@item.Produc_Supplier.Description</p>
+									</td>
+
+									<td class="price"> @item.Produc_Supplier.Price </td>
+
+									<td class="quantity">
+										<div class="input-group mb-3">
+											<input type="text"  class="quantity form-control input-number" value="1">
+										</div>
+									</td>
+
+									<td  class="total"> EGP 100 </td>
+								</tr>
+								<!-- END TR-->
+							}
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<p><a asp-action="AddOrder" asp-controller="Order" class="btn btn-info py-3 px-5 ml-5">Place an order</a></p>
+
+
+
+	<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+
+
+
+
+
+
+
+
+
+
+
+

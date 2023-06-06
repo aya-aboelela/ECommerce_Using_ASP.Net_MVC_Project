@@ -1,0 +1,12 @@
+﻿@model List<Produc_Supplier>
+@{
+    Layout = "_Products";
+    ViewData["Title"] = "ShowProductBySubCategory";
+}
+
+@foreach (var item in Model)
+{
+    <partial name="_ProductDiv" model="@item" />
+}
+
+

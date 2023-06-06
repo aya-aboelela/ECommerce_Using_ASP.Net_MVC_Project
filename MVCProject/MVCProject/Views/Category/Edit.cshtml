@@ -1,0 +1,69 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "Edit";
+}
+<hr />
+<h3 class="text-info mt-5">Edit Category</h3>
+<hr />
+<div class="editform ">
+    <div class="col-md-4">
+        <form asp-action="Edit" class="bg-info">
+            <div asp-validation-summary="All" class="text-danger"></div>
+           
+                <div class="form-group mr-4">
+                    <label asp-for="Name" class="control-label text-white"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Image" class="control-label text-white"></label>
+                    <input asp-for="Image" class="form-control" type="file" />
+                    <span asp-validation-for="Image" class="text-danger"></span>
+                </div>
+            
+            <div class="form-group savebtn d-flex justify-content-center align-content-center mt-4">
+                <input type="submit" value="Save" class="btn btn-secondary" />
+            </div>
+        </form>
+        <div>
+            <p><a asp-action="GetAllCategory" asp-controller="settings" class="btn btn-info py-3 px-5 mt-3">Back To List</a></p>
+        </div>
+    </div>
+
+</div>
+
+
+<style>
+    .savebtn {
+        width: 120px;
+    }
+
+    .editform {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    label {
+        color: rgb(212, 208, 208);
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+        /*        display: grid;
+    */
+    }
+
+        .form-group input {
+         /*  background-color: #17a2b8;*/
+            border: 1px solid #17a2b8;
+            border-radius: 12px;
+        }
+
+    form {
+        border: 1px solid#17a2b8;
+        border-radius: 5px;
+        padding: 20px;
+        width: 529px;
+    }
+</style>

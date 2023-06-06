@@ -1,0 +1,20 @@
+admin:
+----------------
+
+mayar.admin@gmail.com
+mayaratef18
+-------------------
+another admin:
+--------------
+omnia.admin@gmail.com
+omniamohamed16
+
+
+
+user:
+
+omnia.user@gmail.com
+omnia123456 
+
+aya.mohamed@gmail.com
+Pmnia.user@gmail.com

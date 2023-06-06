@@ -1,0 +1,67 @@
+﻿@model List<Supplier>
+@{
+    Layout = "_SupplierDetailsLayout";
+}
+
+<section class="ftco-section">
+
+    <div class="container">
+
+        <div class="row no-gutters ftco-services">
+                <div class="testimony-wrap p-4 pb-5 mr-4">
+                    <div class="user-img mb-5" style="background-image: url(/images/@Model[0].Image)">
+                    </div>
+                    <div class="text text-center">
+                    <p class="name">@Model[0].Name</p>
+                 
+                    </div>
+                </div>
+            <div class="testimony-wrap p-4 pb-5 mr-4">
+                    <div class="user-img mb-5" style="background-image: url(/images/@Model[1].Image)">
+                </div>
+                <div class="text text-center">
+                    <p class="name">@Model[1].Name</p>
+
+                </div>
+            </div>
+            <div class="testimony-wrap p-4 pb-5 mr-4">
+                <div class="user-img mb-5" style="background-image: url(/images/@Model[2].Image)">
+                </div>
+                <div class="text text-center">
+                    <p class="name">@Model[2].Name</p>
+
+                </div>
+            </div>
+
+            <div class="testimony-wrap p-4 pb-5 mr-4">
+                    <div class="user-img mb-5" style="background-image: url(/images/@Model[3].Image)">
+                </div>
+                <div class="text text-center">
+                    <p class="name">@Model[3].Name</p>
+
+                </div>
+            </div>
+            <div class="testimony-wrap p-4 pb-5 mr-4">
+                <div class="user-img mb-5" style="background-image: url(/images/@Model[4].Image)">
+                </div>
+                <div class="text text-center">
+                    <p class="name">@Model[4].Name</p>
+
+                </div>
+            </div>
+            <div class="testimony-wrap p-4 pb-5 mr-4">
+                <div class="user-img mb-5" style="background-image: url(/images/@Model[5].Image)">
+                </div>
+                <div class="text text-center">
+                    <p class="name">@Model[5].Name</p>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</section>
+
+
+

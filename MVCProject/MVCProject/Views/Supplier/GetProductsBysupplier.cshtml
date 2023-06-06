@@ -1,0 +1,42 @@
+﻿@model List<Produc_Supplier>
+@{
+    //Layout = "_SupplierContainer"; 
+}
+
+<section class="ftco-section">
+
+    <div class="container">
+
+        <div class="row no-gutters ftco-services">
+            <div class="testimony-wrap p-4 pb-5 mr-4">
+                @foreach(Produc_Supplier item in Model)
+                {
+         
+
+                    <div class="col-lg-6 mb-5 ftco-animate">
+                        <a href="/images/@item.Image" class="image-popup"><img src="/images/@item.Image" class="img-fluid" alt="Colorlib Template"></a>
+                    </div>
+                    <div class="col-lg-6 product-details pl-md-5 ftco-animate">
+                        <h3>Name:@item.Product.Name</h3>
+
+                        <p class="price"><span>Price:EGP @item.Price</span></p>
+                      
+                        <p >
+                            @item.Description
+                        </p>
+
+                    </div>
+                }
+            </div>
+          
+          
+            </div>
+
+        
+   </div>
+
+
+</section>
+
+
+
